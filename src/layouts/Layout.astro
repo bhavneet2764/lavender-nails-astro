@@ -1,0 +1,108 @@
+
+---
+const { title = 'Lavender Nails | Nail Salon' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Discover manicures, pedicures, gel nails, and nail art at Lavender Nails." />
+    <title>{title}</title>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="/" class="logo">Lavender Nails</a>
+
+        <div class="nav-links">
+          <a href="/">Home</a>
+          <a href="/services">Services</a>
+          <a href="/about">About Us</a>
+          <a href="/contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <slot />
+
+    <footer>
+      <p>© {new Date().getFullYear()} Lavender Nails. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
+
+<style is:global>
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    color: #4b365f;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 22px 8%;
+    background: #f3e8ff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #8254a3;
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+
+  .nav-links a {
+    color: #4b365f;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .nav-links a:hover {
+    color: #8254a3;
+    text-decoration: underline;
+  }
+
+  footer {
+    margin-top: 60px;
+    padding: 25px;
+    text-align: center;
+    background: #f3e8ff;
+    color: #4b365f;
+  }
+
+  @media (max-width: 600px) {
+    .navbar {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .nav-links {
+      justify-content: center;
+      gap: 15px;
+    }
+  }
+</style>

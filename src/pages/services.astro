@@ -1,0 +1,114 @@
+
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Our Services | Lavender Nails">
+  <main class="services-page">
+    <h1>Our Nail Services</h1>
+    <p class="intro">
+      Discover our range of nail care services designed to help
+      you look and feel your best.
+    </p>
+
+<img
+  src="/images/nail-salon.jpg"
+  alt="Nail salon interior and manicure services"
+  class="services-image"
+/>
+
+
+    <section class="services-grid">
+      <article class="service-card">
+        <h2>Manicures</h2>
+        <p>
+          Enjoy beautifully shaped and polished nails with
+          professional hand and nail care.
+        </p>
+      </article>
+
+      <article class="service-card">
+        <h2>Pedicures</h2>
+        <p>
+          Relax with a refreshing foot treatment and
+          beautifully finished toenails.
+        </p>
+      </article>
+
+      <article class="service-card">
+        <h2>Gel Nails</h2>
+        <p>
+          Achieve a glossy, long-lasting finish with
+          our gel nail services.
+        </p>
+      </article>
+
+      <article class="service-card">
+        <h2>Nail Art</h2>
+        <p>
+          Express your personality with creative
+          nail designs and custom artwork.
+        </p>
+      </article>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .services-page {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 30px;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 42px;
+    color: #8254a3;
+  }
+
+  .intro {
+    font-size: 19px;
+    margin-bottom: 45px;
+    line-height: 1.7;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .service-card {
+    background: #faf5ff;
+    padding: 35px;
+    border-radius: 16px;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+
+  h2 {
+    color: #8254a3;
+  }
+
+  .service-card p {
+    line-height: 1.7;
+    font-size: 17px;
+  }
+
+  @media (max-width: 650px) {
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+.services-image {
+  display: block;
+  width: 100%;
+  max-height: 380px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin: 0 auto 40px;
+}
+
+</style>

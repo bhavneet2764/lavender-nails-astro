@@ -1,0 +1,78 @@
+
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="About Us | Lavender Nails">
+  <main>
+    <section class="about">
+      <h1>About Lavender Nails</h1>
+      <p class="subtitle">
+        Beautiful nails, thoughtful care, and a relaxing experience.
+      </p>
+
+      <h2>Who We Are</h2>
+      <p>
+        Lavender Nails is a nail salon dedicated to providing
+        quality nail care in a welcoming and comfortable environment.
+        We believe that taking time for yourself should be an
+        enjoyable and relaxing experience.
+      </p>
+
+      <h2>Our Mission</h2>
+      <p>
+        Our mission is to help every client feel confident and
+        refreshed through personalized nail care, attention
+        to detail, and friendly customer service.
+      </p>
+
+      <h2>Why Choose Lavender Nails?</h2>
+      <ul>
+        <li>A welcoming and relaxing salon atmosphere</li>
+        <li>A variety of manicure and pedicure services</li>
+        <li>Creative nail art and gel nail options</li>
+        <li>A focus on customer satisfaction</li>
+      </ul>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  main {
+    max-width: 950px;
+    margin: 60px auto;
+    padding: 25px;
+  }
+
+  .about {
+    background: #faf5ff;
+    padding: 45px;
+    border-radius: 18px;
+  }
+
+  h1 {
+    font-size: 42px;
+    color: #8254a3;
+  }
+
+  .subtitle {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+
+  h2 {
+    color: #8254a3;
+    margin-top: 35px;
+  }
+
+  p, li {
+    font-size: 17px;
+    line-height: 1.8;
+  }
+
+  @media (max-width: 600px) {
+    .about {
+      padding: 25px;
+    }
+  }
+</style>
